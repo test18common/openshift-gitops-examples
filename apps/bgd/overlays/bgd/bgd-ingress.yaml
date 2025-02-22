@@ -4,8 +4,7 @@ metadata:
   name: bgd
 spec:
   rules:
-    - host: bgd.devnation
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
