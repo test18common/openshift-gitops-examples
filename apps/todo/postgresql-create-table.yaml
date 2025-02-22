@@ -6,6 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
+  ttlSecondsAfterFinished: 100
   template:
     spec:
       containers:
@@ -18,7 +19,7 @@ spec:
           command: ["psql"]
           args:
             [
-              "--host=postgresql",
+              "--host=postgres",
               "--username=admin",
               "--no-password",
               "--dbname=todo",
